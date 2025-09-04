@@ -5,7 +5,7 @@ const API_BASE =
   (typeof import.meta !== "undefined" && import.meta.env?.VITE_API_BASE) ||
   (typeof process !== "undefined" && process.env?.REACT_APP_API_BASE) ||
   (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_BASE) ||
-  "http://localhost:5001";
+  "https://salomo-backend.onrender.com"; // 👈 fallback updated
 
 export default function Success() {
   const [searchParams] = useSearchParams();
