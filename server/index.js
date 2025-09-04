@@ -7,7 +7,7 @@ const app = express();
 
 const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
 const STRIPE_PUBLISHABLE_KEY = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
-const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5002";
+const CLIENT_URL = process.env.CLIENT_URL || "https://projapani.vercel.app";
 
 if (!STRIPE_SECRET_KEY || !STRIPE_PUBLISHABLE_KEY) {
   console.error("⚠️ Missing Stripe keys in .env file!");

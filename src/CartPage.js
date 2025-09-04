@@ -4,11 +4,8 @@ import { useEffect, useMemo, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
 const API_BASE =
-  // Allow multiple env styles; default to typical Express port
-  (typeof import.meta !== "undefined" && import.meta.env?.VITE_API_BASE) ||
-  (typeof process !== "undefined" && process.env?.REACT_APP_API_BASE) ||
-  (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_BASE) ||
-  "http://localhost:5001"
+  process.env.REACT_APP_API_BASE || import.meta.env?.VITE_API_BASE || "https://salomo-backend.onrender.com"
+
 
 export default function CartPage() {
   const location = useLocation()
