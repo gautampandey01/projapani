@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 
-const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:5001";
+const API_BASE =
+  (typeof import.meta !== "undefined" && import.meta.env?.VITE_API_BASE) ||
+  (typeof process !== "undefined" && process.env?.REACT_APP_API_BASE) ||
+  (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_BASE) ||
+  "http://localhost:5001";
 
 export default function Success() {
   const [searchParams] = useSearchParams();
