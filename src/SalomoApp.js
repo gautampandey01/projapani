@@ -215,7 +215,7 @@ const SalomoApp = () => {
                 お客様として投稿
               </button>
               <button
-                className="bg-white border border-green-400 text-gray-900 px-8 py-3 rounded-full font-semibold shadow transition-all min-w-[180px]"
+                className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
               >
                 美容師として求人を見る
               </button>
