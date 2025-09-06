@@ -23,10 +23,10 @@ const SalomoLoginPage = () => {
       [name]: value
     }));
   };
-//helloo
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log('フォーム送信:', formData);
 
     if (activeTab === 'signin') {
       navigate('/home');
@@ -36,34 +36,34 @@ const SalomoLoginPage = () => {
   const features = [
     {
       icon: Users,
-      title: "Large Community",
-      description: "Thousands of professionals and customers",
+      title: "大規模コミュニティ",
+      description: "何千人ものプロフェッショナルとお客様",
       color: "text-blue-500"
     },
     {
       icon: Shield,
-      title: "Verified Profiles",
-      description: "Trusted and verified professionals",
+      title: "認証済みプロフィール",
+      description: "信頼できる認証済みプロフェッショナル",
       color: "text-green-500"
     },
     {
       icon: Shield,
-      title: "Secure Platform",
-      description: "Your data is safe with us",
+      title: "安全なプラットフォーム",
+      description: "あなたのデータは安全に保護されています",
       color: "text-pink-500"
     },
     {
       icon: Star,
-      title: "Easy Matching",
-      description: "Find your perfect match quickly",
+      title: "簡単マッチング",
+      description: "理想の相手をすぐに見つけましょう",
       color: "text-orange-500"
     }
   ];
 
   const stats = [
-    { number: "10K+", label: "Active Users", color: "text-blue-500" },
-    { number: "500+", label: "Professionals", color: "text-green-500" },
-    { number: "95%", label: "Satisfaction", color: "text-pink-500" }
+    { number: "10K+", label: "アクティブユーザー", color: "text-blue-500" },
+    { number: "500+", label: "プロフェッショナル", color: "text-green-500" },
+    { number: "95%", label: "満足度", color: "text-pink-500" }
   ];
 
   return (
@@ -78,7 +78,7 @@ const SalomoLoginPage = () => {
               </div>
               <span className="text-2xl font-bold text-gray-900">SALOMO</span>
             </div>
-            <span className="text-gray-600 font-medium">Matching Platform</span>
+            <span className="text-gray-600 font-medium">マッチングプラットフォーム</span>
           </div>
         </div>
       </header>
@@ -88,16 +88,16 @@ const SalomoLoginPage = () => {
         <div className="flex-1 flex flex-col justify-center px-8 lg:px-16 py-12">
           <div className="max-w-lg">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Connect with the Best
+              最高のプロとつながる
               <br />
               <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Beauty Professionals
+                ビューティープロフェッショナル
               </span>
             </h1>
             
             <p className="text-lg text-gray-600 mb-12">
-              Find your perfect match between customers and beauty professionals. 
-              Join our community and discover amazing opportunities.
+              お客様とビューティープロフェッショナルの理想のマッチングを見つけましょう。
+              コミュニティに参加して素晴らしい機会を発見してください。
             </p>
 
             {/* Features Grid */}
@@ -133,14 +133,14 @@ const SalomoLoginPage = () => {
         <div className="w-full max-w-md bg-white shadow-2xl flex flex-col">
           <div className="flex-1 px-8 py-12">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Welcome Back</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">お帰りなさい</h2>
               <p className="text-gray-600">
-                Sign in to your account or{' '}
+                アカウントにサインインするか{' '}
                 <button 
                   onClick={() => setActiveTab('signup')}
                   className="text-blue-500 hover:text-blue-600 ml-1 font-medium"
                 >
-                  create a new one
+                  新しいアカウントを作成
                 </button>
               </p>
             </div>
@@ -155,7 +155,7 @@ const SalomoLoginPage = () => {
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
-                Sign In
+                サインイン
               </button>
               <button
                 onClick={() => setActiveTab('signup')}
@@ -165,7 +165,7 @@ const SalomoLoginPage = () => {
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
-                Sign Up
+                サインアップ
               </button>
             </div>
 
@@ -175,7 +175,7 @@ const SalomoLoginPage = () => {
               {activeTab === 'signup' && (
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name
+                    氏名
                   </label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -184,7 +184,7 @@ const SalomoLoginPage = () => {
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleInputChange}
-                      placeholder="Enter your full name"
+                      placeholder="氏名を入力してください"
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -194,7 +194,7 @@ const SalomoLoginPage = () => {
               {/* Email Field */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address
+                  メールアドレス
                 </label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -203,7 +203,7 @@ const SalomoLoginPage = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="Enter your email"
+                    placeholder="メールアドレスを入力してください"
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
@@ -222,7 +222,7 @@ const SalomoLoginPage = () => {
                       name="linkedId"
                       value={formData.linkedId}
                       onChange={handleInputChange}
-                      placeholder="Enter your LinkedId"
+                      placeholder="LinkedIdを入力してください"
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -232,7 +232,7 @@ const SalomoLoginPage = () => {
               {/* Password Field */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Password
+                  パスワード
                 </label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -241,7 +241,7 @@ const SalomoLoginPage = () => {
                     name="password"
                     value={formData.password}
                     onChange={handleInputChange}
-                    placeholder={activeTab === 'signup' ? 'Create a password' : '••••••'}
+                    placeholder={activeTab === 'signup' ? 'パスワードを作成してください' : '••••••'}
                     className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                   <button
@@ -258,7 +258,7 @@ const SalomoLoginPage = () => {
               {activeTab === 'signup' && (
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Confirm Password
+                    パスワード確認
                   </label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -267,7 +267,7 @@ const SalomoLoginPage = () => {
                       name="confirmPassword"
                       value={formData.confirmPassword}
                       onChange={handleInputChange}
-                      placeholder="Confirm your password"
+                      placeholder="パスワードを再入力してください"
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -278,7 +278,7 @@ const SalomoLoginPage = () => {
               {activeTab === 'signup' && (
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    I am a
+                    私は…
                   </label>
                   <div className="relative">
                     <select
@@ -287,9 +287,9 @@ const SalomoLoginPage = () => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white"
                     >
-                      <option value="customer">Customer</option>
-                      <option value="professional">Beauty Professional</option>
-                      <option value="business">Business Owner</option>
+                      <option value="customer">お客様</option>
+                      <option value="professional">ビューティープロフェッショナル</option>
+                      <option value="business">ビジネスオーナー</option>
                     </select>
                     <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                   </div>
@@ -301,7 +301,7 @@ const SalomoLoginPage = () => {
                 onClick={handleSubmit}
                 className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
               >
-                {activeTab === 'signin' ? 'Sign In' : 'Create Account'}
+                {activeTab === 'signin' ? 'サインイン' : 'アカウント作成'}
               </button>
             </div>
 
@@ -309,22 +309,22 @@ const SalomoLoginPage = () => {
             <div className="mt-6 text-center">
               {activeTab === 'signin' ? (
                 <p className="text-sm text-gray-600">
-                  Don't have an account?{' '}
+                  アカウントをお持ちでない方は{' '}
                   <button
                     onClick={() => setActiveTab('signup')}
                     className="text-blue-500 hover:text-blue-600 font-medium"
                   >
-                    Sign up here
+                    こちらからサインアップ
                   </button>
                 </p>
               ) : (
                 <p className="text-sm text-gray-600">
-                  Already have an account?{' '}
+                  すでにアカウントをお持ちの方は{' '}
                   <button
                     onClick={() => setActiveTab('signin')}
                     className="text-blue-500 hover:text-blue-600 font-medium"
                   >
-                    Sign in here
+                    こちらからサインイン
                   </button>
                 </p>
               )}
@@ -334,11 +334,11 @@ const SalomoLoginPage = () => {
           {/* Footer */}
           <div className="px-8 py-6 bg-gray-50 border-t">
             <div className="text-center">
-              <p className="text-xs text-gray-500 mb-2">© 2024 SALOMO. All rights reserved.</p>
+              <p className="text-xs text-gray-500 mb-2">© 2024 SALOMO. 無断転載を禁じます。</p>
               <div className="flex justify-center space-x-4 text-xs">
-                <a href="#" className="text-gray-400 hover:text-gray-600">Privacy Policy</a>
-                <a href="#" className="text-gray-400 hover:text-gray-600">Terms of Service</a>
-                <a href="#" className="text-gray-400 hover:text-gray-600">Contact Us</a>
+                <a href="#" className="text-gray-400 hover:text-gray-600">プライバシーポリシー</a>
+                <a href="#" className="text-gray-400 hover:text-gray-600">利用規約</a>
+                <a href="#" className="text-gray-400 hover:text-gray-600">お問い合わせ</a>
               </div>
             </div>
           </div>
